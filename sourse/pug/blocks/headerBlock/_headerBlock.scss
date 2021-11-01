@@ -3,10 +3,10 @@
 	--sTPB: 0;
 
 	--sPT: 15px;
-	--sPB: #{rem(45)};
+	--sPB: 32px;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(110)};
-		--sPB: #{rem(90)};
+		--sPB: #{rem(53)};
 		--sTPB: #{rem(40)};
 	}
 

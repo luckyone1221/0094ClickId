@@ -239,7 +239,7 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	//luckyOne Js
+	//
 	let headerH;
 	let header = document.querySelector(".header--js");
 	function calcHeaderHeight() {
@@ -290,6 +290,14 @@ function eventHandler() {
 		...defaultSl,
 		...freeMomentum,
 	});
+
+	//
+	let sServiceSlider = new Swiper('.sService-slider-js', {
+		slidesPerView: "auto",
+		spaceBetween: 16,
+	});
+
+
 	// modal window
 
 };

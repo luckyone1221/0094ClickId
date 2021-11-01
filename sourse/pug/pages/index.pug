@@ -3,10 +3,11 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sService/_sService.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg='index-320.png'
+	- let  bg='index.png'
 
 block title
 	- let  title= 'title'
@@ -17,6 +18,7 @@ block pagecontent
 		+top-nav()
 	//+topLine()
 	+headerBlock()
+	+sService
 	+sForm()
 	+sContact()
 	+footer()

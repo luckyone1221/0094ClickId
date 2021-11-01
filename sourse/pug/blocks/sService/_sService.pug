@@ -1,0 +1,82 @@
+mixin sService(data)
+	// start sService
+	+b.SECTION.sService.section#sService&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Выберите Пакет услуг:
+			+e.slider-wrap
+				+e.slider.swiper.sService-slider-js
+					+e.sl-wrapper.swiper-wrapper
+						+sServiceSlide({
+							green: '',
+							descr: 'С Пакетом услуг «Найди меня» Вы избежите проблем, в случае потери паспорта, водительского удостоверения, багажа или ключей.',
+							list: [
+								'сет из двух наклеек',
+								'брелок для ключей',
+								'бирку на багаж',
+							],
+							inpVal: '4',
+							price: '10 000',
+							pricePerMonth: '2 500 ₽ за единицу',
+						})
+						+sServiceSlide({
+							green: 'PRO',
+							descr: 'С Пакетом услуг «Найди меня  PRO» Вы избежите проблем, в случае утери документов, гаджетов, багажа или ключей, а также близких людей и питомцев, если они потерялись.',
+							list: [
+								'сет из двух наклеек',
+								'брелок для ключей',
+								'бирку на багаж',
+								'браслет для детей',
+								'личную карту для пожилых людей',
+								'кулон для животного',
+							],
+							inpVal: '1',
+							price: '4 500',
+							pricePerMonth: '4 500 ₽ за единицу',
+						})
+	// end sService
+
+mixin sServiceSlide(data)
+	+e.slide.swiper-slide
+		+e.item
+			+e.row--top.row
+				+e.col--left.col
+					+pic('sService-img.png', undefined, 0)(class="sService__img")
+					+e.content
+						+e.title
+							| Найди меня
+							|
+							if data.green
+								span=data.green
+						+e.gray Пакет услуг на 1 год
+						+e.descr=data.descr
+						+e.include Включает в себя:
+						+e.UL.list
+							-for(let item of data.list)
+								li=item
+				+e.col--right.col-auto
+					+pic('sService-bg.png')(class="sService__bg")
+			+e.row--bot.row
+				+e.b-col--left.col
+					+e.controll-row.row
+						.col-md-auto
+							+e.g-title Количество:
+							+e.amount-inp
+								+e.inp-btn--min(type="button")
+									+icon('minus')
+								+e.INPUT.input.form-control(type="text" value=data.inpVal)
+								+e.inp-btn--plus(type="button")
+									+icon('plus')
+						.col-md
+							+e.g-title Стоимость:
+							+e.price-row.row.align-items-center
+								+e.p-col--price.col-auto=data.price
+								+e.p-col--currency.col-auto ₽
+								+e.p-col--slash.col-auto /
+								+e.p-col--per-month.col-auto=data.pricePerMonth
+						.col-md-auto
+							+e.btn(href="#") Выбрать
+						.col-md-auto
+				+e.b-col--right.col-auto
+					+e.big-btn(href="#")
+						+icon('arrow-right')
