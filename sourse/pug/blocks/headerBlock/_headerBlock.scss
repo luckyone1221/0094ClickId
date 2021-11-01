@@ -1,6 +1,60 @@
 // start .headerBlock
 .headerBlock {
-	&__{}
+	--sTPB: 0;
+
+	--sPT: 15px;
+	--sPB: #{rem(45)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(110)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(40)};
+	}
+
+	&__row{
+		--bs-gutter-y: 20px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-y: #{rem(30)};
+		}
+	}
+	.section-title{
+		h1{
+			max-width: 850px;
+
+			margin-bottom: 16px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(34);
+			}
+			@include media-breakpoint-up(xxl){
+				letter-spacing: rem(-0.08);
+			}
+		}
+		p{
+			max-width: 838px;
+		}
+	}
+	&__pic{
+		margin: 0 auto;
+
+		width: 39%;
+		@include media-breakpoint-up(sm){
+			width: 100%;
+		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media-breakpoint-up(xxl){
+			position: relative;
+			top: -28px;
+			right: -25px;
+		}
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
 	&__{}
 	&__{}
 	&__{}

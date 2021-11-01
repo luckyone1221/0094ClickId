@@ -13,7 +13,6 @@ global.$ = {
     npmDist: require('gulp-npm-dist'),
     newer: require('gulp-newer'),
     rename: require('gulp-rename'),
-    gp: require('gulp-load-plugins'),
     responsive: require('gulp-responsive'),
 
     gulpif: require('gulp-if'),

@@ -2,9 +2,11 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				.col-lg-8.col-xl-9
+					+b.section-title
+						h1 Сервис для защиты от потери самого ценного
+						p Мы поможем найти утерянные документы, гаджеты и багаж, а также воссоединиться с питомцами и близкими людьми, если они потерялись.
+				.col-lg-4.col-xl-3
+					+pic('headerBlock.png', undefined, 0)(class="headerBlock__pic")
 	// end headerBlock
