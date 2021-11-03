@@ -529,4 +529,9 @@ body{
 //-
 .btn-primary{
 	color: $white!important;
+	&:hover{
+		background-color: $green3!important;
+		border-color: $green3!important;
+	}
 }
+//

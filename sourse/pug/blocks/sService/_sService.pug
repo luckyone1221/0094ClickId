@@ -10,6 +10,8 @@ mixin sService(data)
 						+sServiceSlide({
 							imgNum: 1,
 							green: '',
+							iconName: 'arrow-right',
+							BigBtnClasses: 'swiper-next',
 							descr: 'С Пакетом услуг «Найди меня» Вы избежите проблем, в случае потери паспорта, водительского удостоверения, багажа или ключей.',
 							list: [
 								'сет из двух наклеек',
@@ -24,6 +26,8 @@ mixin sService(data)
 							imgNum: 2,
 							green: 'PRO',
 							descr: 'С Пакетом услуг «Найди меня  PRO» Вы избежите проблем, в случае утери документов, гаджетов, багажа или ключей, а также близких людей и питомцев, если они потерялись.',
+							iconName: 'arrow-left',
+							BigBtnClasses: 'swiper-prev',
 							list: [
 								'сет из двух наклеек',
 								'брелок для ключей',
@@ -81,6 +85,6 @@ mixin sServiceSlide(data)
 						.col-md-auto
 							+e.btn(href="#") Выбрать
 				+e.b-col--right.col-md-auto
-					+e.big-btn(href="#")
-						+icon('arrow-right')
+					+e.big-btn(class=data.BigBtnClasses)
+						+icon(data.iconName)
 					+pic('sService-bg.png')(class="sService__bg sService__bg--mob d-md-none")

@@ -295,6 +295,13 @@ function eventHandler() {
 	let sServiceSlider = new Swiper('.sService-slider-js', {
 		slidesPerView: "auto",
 		spaceBetween: 16,
+
+		//
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev',
+		},
+
 	});
 
 
