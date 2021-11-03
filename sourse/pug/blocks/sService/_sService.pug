@@ -8,6 +8,7 @@ mixin sService(data)
 				+e.slider.swiper.sService-slider-js
 					+e.sl-wrapper.swiper-wrapper
 						+sServiceSlide({
+							imgNum: 1,
 							green: '',
 							descr: 'С Пакетом услуг «Найди меня» Вы избежите проблем, в случае потери паспорта, водительского удостоверения, багажа или ключей.',
 							list: [
@@ -20,6 +21,7 @@ mixin sService(data)
 							pricePerMonth: '2 500 ₽ за единицу',
 						})
 						+sServiceSlide({
+							imgNum: 2,
 							green: 'PRO',
 							descr: 'С Пакетом услуг «Найди меня  PRO» Вы избежите проблем, в случае утери документов, гаджетов, багажа или ключей, а также близких людей и питомцев, если они потерялись.',
 							list: [
@@ -40,8 +42,10 @@ mixin sServiceSlide(data)
 	+e.slide.swiper-slide
 		+e.item
 			+e.row--top.row
-				+e.col--left.col
-					+pic('sService-img.png', undefined, 0)(class="sService__img")
+				+e.col--left.col-md
+					+pic(`sService-img-${data.imgNum}.png`, undefined, 0)(class="sService__img")
+					//-+e.img
+						img(loading="lazy" src=`img/@2x/sService-img-${data.imgNum}.png` alt="")
 					+e.content
 						+e.title
 							| Найди меня
@@ -54,10 +58,10 @@ mixin sServiceSlide(data)
 						+e.UL.list
 							-for(let item of data.list)
 								li=item
-				+e.col--right.col-auto
+				+e.col--right.col-md-auto.d-none.d-md-block
 					+pic('sService-bg.png')(class="sService__bg")
 			+e.row--bot.row
-				+e.b-col--left.col
+				+e.b-col--left.col-md
 					+e.controll-row.row
 						.col-md-auto
 							+e.g-title Количество:
@@ -67,7 +71,7 @@ mixin sServiceSlide(data)
 								+e.INPUT.input.form-control(type="text" value=data.inpVal)
 								+e.inp-btn--plus(type="button")
 									+icon('plus')
-						.col-md
+						.col-md.order-first.order-md-0
 							+e.g-title Стоимость:
 							+e.price-row.row.align-items-center
 								+e.p-col--price.col-auto=data.price
@@ -76,7 +80,7 @@ mixin sServiceSlide(data)
 								+e.p-col--per-month.col-auto=data.pricePerMonth
 						.col-md-auto
 							+e.btn(href="#") Выбрать
-						.col-md-auto
-				+e.b-col--right.col-auto
+				+e.b-col--right.col-md-auto
 					+e.big-btn(href="#")
 						+icon('arrow-right')
+					+pic('sService-bg.png')(class="sService__bg sService__bg--mob d-md-none")

@@ -10,10 +10,10 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="index.png">
+	<body class="main-page" data-bg="index-320.png">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -69,10 +69,10 @@
 								<div class="sService__slide swiper-slide">
 									<div class="sService__item">
 										<div class="sService__row sService__row--top row">
-											<div class="sService__col sService__col--left col">
+											<div class="sService__col sService__col--left col-md">
 												<!-- picture-->
 												<picture class="sService__img"> 
-													<source type="image/webp" srcset="img/@2x/webp/sService-img.webp"/><img src="img/@2x/sService-img.png" alt="" loading="lazy"/>
+													<source type="image/webp" srcset="img/@2x/webp/sService-img-1.webp"/><img src="img/@2x/sService-img-1.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
 												<div class="sService__content">
@@ -93,7 +93,7 @@
 													</ul>
 												</div>
 											</div>
-											<div class="sService__col sService__col--right col-auto">
+											<div class="sService__col sService__col--right col-md-auto d-none d-md-block">
 												<!-- picture-->
 												<picture class="sService__bg"> 
 													<source type="image/webp" srcset="img/@2x/webp/sService-bg.webp" media="(min-width:576px)"/>
@@ -105,7 +105,7 @@
 											</div>
 										</div>
 										<div class="sService__row sService__row--bot row">
-											<div class="sService__b-col sService__b-col--left col">
+											<div class="sService__b-col sService__b-col--left col-md">
 												<div class="sService__controll-row row">
 													<div class="col-md-auto">
 														<div class="sService__g-title">Количество:
@@ -123,7 +123,7 @@
 															</button>
 														</div>
 													</div>
-													<div class="col-md">
+													<div class="col-md order-first order-md-0">
 														<div class="sService__g-title">Стоимость:
 														</div>
 														<div class="sService__price-row row align-items-center">
@@ -141,15 +141,22 @@
 														<a class="sService__btn" href="#">Выбрать
 														</a>
 													</div>
-													<div class="col-md-auto"></div>
 												</div>
 											</div>
-											<div class="sService__b-col sService__b-col--right col-auto">
+											<div class="sService__b-col sService__b-col--right col-md-auto">
 												<a class="sService__big-btn" href="#">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
 												</a>
+												<!-- picture-->
+												<picture class="sService__bg sService__bg--mob d-md-none"> 
+													<source type="image/webp" srcset="img/@2x/webp/sService-bg.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/sService-bg.webp"/>
+													<source type="image/png" srcset="img/@2x/sService-bg.png" media="(min-width:576px)"/>
+													<source type="image/png" srcset="img/@1x/sService-bg.png"/><img src="img/@2x/sService-bg.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
 											</div>
 										</div>
 									</div>
@@ -157,10 +164,10 @@
 								<div class="sService__slide swiper-slide">
 									<div class="sService__item">
 										<div class="sService__row sService__row--top row">
-											<div class="sService__col sService__col--left col">
+											<div class="sService__col sService__col--left col-md">
 												<!-- picture-->
 												<picture class="sService__img"> 
-													<source type="image/webp" srcset="img/@2x/webp/sService-img.webp"/><img src="img/@2x/sService-img.png" alt="" loading="lazy"/>
+													<source type="image/webp" srcset="img/@2x/webp/sService-img-2.webp"/><img src="img/@2x/sService-img-2.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
 												<div class="sService__content">
@@ -184,7 +191,7 @@
 													</ul>
 												</div>
 											</div>
-											<div class="sService__col sService__col--right col-auto">
+											<div class="sService__col sService__col--right col-md-auto d-none d-md-block">
 												<!-- picture-->
 												<picture class="sService__bg"> 
 													<source type="image/webp" srcset="img/@2x/webp/sService-bg.webp" media="(min-width:576px)"/>
@@ -196,7 +203,7 @@
 											</div>
 										</div>
 										<div class="sService__row sService__row--bot row">
-											<div class="sService__b-col sService__b-col--left col">
+											<div class="sService__b-col sService__b-col--left col-md">
 												<div class="sService__controll-row row">
 													<div class="col-md-auto">
 														<div class="sService__g-title">Количество:
@@ -214,7 +221,7 @@
 															</button>
 														</div>
 													</div>
-													<div class="col-md">
+													<div class="col-md order-first order-md-0">
 														<div class="sService__g-title">Стоимость:
 														</div>
 														<div class="sService__price-row row align-items-center">
@@ -232,15 +239,22 @@
 														<a class="sService__btn" href="#">Выбрать
 														</a>
 													</div>
-													<div class="col-md-auto"></div>
 												</div>
 											</div>
-											<div class="sService__b-col sService__b-col--right col-auto">
+											<div class="sService__b-col sService__b-col--right col-md-auto">
 												<a class="sService__big-btn" href="#">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
 												</a>
+												<!-- picture-->
+												<picture class="sService__bg sService__bg--mob d-md-none"> 
+													<source type="image/webp" srcset="img/@2x/webp/sService-bg.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/sService-bg.webp"/>
+													<source type="image/png" srcset="img/@2x/sService-bg.png" media="(min-width:576px)"/>
+													<source type="image/png" srcset="img/@1x/sService-bg.png"/><img src="img/@2x/sService-bg.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
 											</div>
 										</div>
 									</div>
@@ -251,38 +265,408 @@
 				</div>
 			</section>
 			<!-- end sService-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sHow-->
+			<section class="sHow section" id="sHow">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sForm</h2>
+						<h2>Как это работает</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sHow__box">
+						<div class="sHow__logoes d-none d-xl-block">
+							<div class="sHow__logo"><img loading="lazy" src="img/@2x/sHow-logo-1.png" alt=""/>
+							</div>
+							<div class="sHow__logo"><img loading="lazy" src="img/svg/sHow-logo-2.svg" alt=""/>
+							</div>
+							<div class="sHow__logo"><img loading="lazy" src="img/svg/sHow-logo-3.svg" alt=""/>
+							</div>
+						</div>
+						<div class="sHow__row row justify-content-center">
+							<div class="sHow__col col-xl-auto col-md-4">
+								<div class="sHow__item">
+									<div class="sHow__item-row row align-items-center flex-xl-nowrap">
+										<div class="sHow__sub-col sHow__sub-col--img col-auto col-md-12 col-xl-auto">
+											<div class="sHow__i-img"><img loading="lazy" src="img/svg/sHow-1.svg" alt=""/>
+											</div>
+										</div>
+										<div class="sHow__sub-col sHow__sub-col--descr col col-md-12 col-xl-auto">
+											<div class="sHow__title">Покупка
+											</div>
+											<div class="sHow__descr">Вы покупаете пакет услуг
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sHow__col col-xl-auto col-md-4">
+								<div class="sHow__item">
+									<div class="sHow__item-row row align-items-center flex-xl-nowrap">
+										<div class="sHow__sub-col sHow__sub-col--img col-auto col-md-12 col-xl-auto">
+											<div class="sHow__i-img"><img loading="lazy" src="img/svg/sHow-2.svg" alt=""/>
+											</div>
+										</div>
+										<div class="sHow__sub-col sHow__sub-col--descr col col-md-12 col-xl-auto">
+											<div class="sHow__title">Получение
+											</div>
+											<div class="sHow__descr">Доставка Почтой России
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sHow__col col-xl-auto col-md-4">
+								<div class="sHow__item">
+									<div class="sHow__item-row row align-items-center flex-xl-nowrap">
+										<div class="sHow__sub-col sHow__sub-col--img col-auto col-md-12 col-xl-auto">
+											<div class="sHow__i-img"><img loading="lazy" src="img/svg/sHow-3.svg" alt=""/>
+											</div>
+										</div>
+										<div class="sHow__sub-col sHow__sub-col--descr col col-md-12 col-xl-auto">
+											<div class="sHow__title">Применение
+											</div>
+											<div class="sHow__descr">Вы наклеиваете или прикрепляете  приобретенные метки
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sHow__col col-xl-auto col-md-4">
+								<div class="sHow__item">
+									<div class="sHow__item-row row align-items-center flex-xl-nowrap">
+										<div class="sHow__sub-col sHow__sub-col--img col-auto col-md-12 col-xl-auto">
+											<div class="sHow__i-img"><img loading="lazy" src="img/svg/sHow-4.svg" alt=""/>
+											</div>
+										</div>
+										<div class="sHow__sub-col sHow__sub-col--descr col col-md-12 col-xl-auto">
+											<div class="sHow__title">Информирование
+											</div>
+											<div class="sHow__descr">Как только утерянная вещь будет найдена, мы сообщим об этом и поможем вернуть
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sHow__col col-xl-auto col-md-4">
+								<div class="sHow__item">
+									<div class="sHow__item-row row align-items-center flex-xl-nowrap">
+										<div class="sHow__sub-col sHow__sub-col--img col-auto col-md-12 col-xl-auto">
+											<div class="sHow__i-img"><img loading="lazy" src="img/svg/sHow-5.svg" alt=""/>
+											</div>
+										</div>
+										<div class="sHow__sub-col sHow__sub-col--descr col col-md-12 col-xl-auto">
+											<div class="sHow__title">Возврат
+											</div>
+											<div class="sHow__descr">Clicktoid доставляет найденную вещь в любое удобное для вас время и место 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<!-- end sHow-->
+			<!-- start sLast-->
+			<section class="sLast section" id="sLast">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sContact</h2>
+						<h2>Последние возвраты :</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sLast__items">
+						<div class="sLast__item">
+							<div class="sLast__item-row row">
+								<div class="sLast__col sLast__col--img col-auto">
+									<div class="sLast__img"><img loading="lazy" src="img/svg/sLast-1.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--date col col-sm-auto">
+									<div class="sLast__gray">04.07.2021
+									</div>
+									<div class="sLast__big sLast__big--name">Александр М.
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--dots col-sm">
+									<div class="sLast__dot-line d-none d-sm-block">
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--lost col-auto">
+									<div class="sLast__gray">Потеряно:
+									</div>
+									<div class="sLast__big sLast__big--lost">Багаж
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--time col col-sm-auto">
+									<div class="sLast__gray">Срок возврата:
+									</div>
+									<div class="sLast__big sLast__big--return">2 дня
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sLast__item">
+							<div class="sLast__item-row row">
+								<div class="sLast__col sLast__col--img col-auto">
+									<div class="sLast__img"><img loading="lazy" src="img/svg/sLast-2.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--date col col-sm-auto">
+									<div class="sLast__gray">06.07.2021
+									</div>
+									<div class="sLast__big sLast__big--name">Иван Х.
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--dots col-sm">
+									<div class="sLast__dot-line d-none d-sm-block">
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--lost col-auto">
+									<div class="sLast__gray">Потеряно:
+									</div>
+									<div class="sLast__big sLast__big--lost">Ключи
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--time col col-sm-auto">
+									<div class="sLast__gray">Срок возврата:
+									</div>
+									<div class="sLast__big sLast__big--return">8 часов
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sLast__item">
+							<div class="sLast__item-row row">
+								<div class="sLast__col sLast__col--img col-auto">
+									<div class="sLast__img"><img loading="lazy" src="img/svg/sLast-3.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--date col col-sm-auto">
+									<div class="sLast__gray">06.07.2021
+									</div>
+									<div class="sLast__big sLast__big--name">Виктор Д.
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--dots col-sm">
+									<div class="sLast__dot-line d-none d-sm-block">
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--lost col-auto">
+									<div class="sLast__gray">Потеряно:
+									</div>
+									<div class="sLast__big sLast__big--lost">Документы
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--time col col-sm-auto">
+									<div class="sLast__gray">Срок возврата:
+									</div>
+									<div class="sLast__big sLast__big--return">2 часа
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sLast__item">
+							<div class="sLast__item-row row">
+								<div class="sLast__col sLast__col--img col-auto">
+									<div class="sLast__img"><img loading="lazy" src="img/svg/sLast-1.svg" alt=""/>
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--date col col-sm-auto">
+									<div class="sLast__gray">05.07.2021
+									</div>
+									<div class="sLast__big sLast__big--name">Елена Г.
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--dots col-sm">
+									<div class="sLast__dot-line d-none d-sm-block">
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--lost col-auto">
+									<div class="sLast__gray">Потеряно:
+									</div>
+									<div class="sLast__big sLast__big--lost">Багаж
+									</div>
+								</div>
+								<div class="sLast__col sLast__col--time col col-sm-auto">
+									<div class="sLast__gray">Срок возврата:
+									</div>
+									<div class="sLast__big sLast__big--return">1 день
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sLast__sm-gray">* - Пользователи дали согласие на публикацию своих данных
+					</div>
 				</div>
 			</section>
-			<!-- end sContact-->
-			<footer class="footer">
+			<!-- end sLast-->
+			<!-- start sReturned-->
+			<div class="sReturned section" id="sReturned">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<div class="sReturned__title">Всего возвращено:
+					</div>
+					<div class="sReturned__box">
+						<div class="sReturned__row row">
+							<div class="sReturned__col col-md-4">
+								<div class="sReturned__sub-row row align-items-center">
+									<div class="sReturned__sub-col sReturned__sub-col--img col-auto col-md-auto">
+										<div class="sReturned__img"><img loading="lazy" src="img/svg/sLast-1.svg" alt=""/>
+										</div>
+									</div>
+									<div class="sReturned__sub-col sReturned__sub-col--bar col">
+									</div>
+									<div class="sReturned__sub-col sReturned__sub-col--txt col-auto col-md-12">
+										<div class="sReturned__txt">54 багажа
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sReturned__col col-md-4">
+								<div class="sReturned__sub-row row align-items-center">
+									<div class="sReturned__sub-col sReturned__sub-col--img col-auto col-md-auto">
+										<div class="sReturned__img"><img loading="lazy" src="img/svg/sLast-3.svg" alt=""/>
+										</div>
+									</div>
+									<div class="sReturned__sub-col sReturned__sub-col--bar col">
+									</div>
+									<div class="sReturned__sub-col sReturned__sub-col--txt col-auto col-md-12">
+										<div class="sReturned__txt">192 документа
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sReturned__col col-md-4">
+								<div class="sReturned__sub-row row align-items-center">
+									<div class="sReturned__sub-col sReturned__sub-col--img col-auto col-md-auto">
+										<div class="sReturned__img"><img loading="lazy" src="img/svg/sLast-2.svg" alt=""/>
+										</div>
+									</div>
+									<div class="sReturned__sub-col sReturned__sub-col--bar col">
+									</div>
+									<div class="sReturned__sub-col sReturned__sub-col--txt col-auto col-md-12">
+										<div class="sReturned__txt">598 ключей
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sReturned__galery-row row">
+						<div class="sReturned__col sReturned__col--left col-lg-6">
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-1.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-2.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-3.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-4.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-5.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-6.png" alt=""/>
+							</div>
+						</div>
+						<div class="sReturned__col sReturned__col--right col-lg-6">
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-7.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-8.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-9.png" alt=""/>
+							</div>
+							<div class="sReturned__g-img"><img loading="lazy" src="img/@2x/sReturned-10.png" alt=""/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sReturned-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>О компании</h2>
+					</div>
+					<div class="sAbout__row row">
+						<div class="col-md-auto">
+							<a class="sAbout__img" href="#"><img loading="lazy" src="img/@2x/sAbout.png" alt=""/>
+							</a>
+						</div>
+						<div class="col-md">
+							<div class="sAbout__txt">
+								<p><b>Компания КликТуАйДи предоставляет инновационный сервис на рынке поддержки клиентов в случаях, когда потерялись ваши личные вещи, близкие люди или питомцы.</b></p>
+								<p>Качественный сервис, профессиональный и высокий уровень обслуживания клиентов позволили заработать лояльность по всему миру.</p>
+								<p>Благодаря предварительной маркировке личных вещей специальными метками (брелоками, наклейками, браслетами, кулонами, багажными бирками) с уникальным идентификационным (ID) номером</p><a href="#">Узнать больше о компании...</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAbout-->
+			<footer class="footer text-center text-md-start">
+				<div class="container">
+					<div class="footer__top-row row">
+						<div class="col-md">
+							<div class="footer__sub-row row justify-content-center justify-content-md-start">
+								<div class="col-auto">
+									<a class="footer__f-logo" href="#"><img loading="lazy" src="img/@2x/footer-logo-1.png" alt=""/>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="footer__f-logo" href="#"><img loading="lazy" src="img/svg/footer-logo-2.svg" alt=""/>
+									</a>
+								</div>
+								<div class="col-lg d-none d-sm-block">
+									<div class="footer__top-txt">Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
+									</div>
+								</div>
+							</div>
+							<ul class="footer__menu">
+								<li><a href="#">оплата</a></li>
+								<li><a href="#">Получение</a></li>
+								<li><a href="#">Продление</a></li>
+								<li><a href="#">Вопросы и ответы</a></li>
+							</ul>
+							<div class="footer__top-txt d-sm-none">Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
+							</div>
+						</div>
+						<div class="col-md-auto text-md-end">
+							<div class="footer__link-wrap">
+								<a class="footer__link" href="tel:+88004444308">8 800 444 43 08
+								</a>
+								<div class="footer__sm-txt">Консультация и поддержка клиентов
+								</div>
+							</div>
+							<div class="footer__link-wrap">
+								<a class="footer__link" href="tel:+84996854308">8 499 685 43 08
+								</a>
+								<div class="footer__sm-txt">Help and customer support
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bot-row row">
+						<div class="col-lg-auto text-center text-md-start">
+							<a class="footer__iconed-link" href="#">
+								<svg class="icon icon-download ">
+									<use xlink:href="img/svg/sprite.svg#download"></use>
+								</svg><span class="footer__link-txt">Политика конфиденциальности</span>
+							</a>
+						</div>
+						<div class="col-lg-auto text-center text-md-start">
+							<a class="footer__iconed-link" href="#">
+								<svg class="icon icon-download ">
+									<use xlink:href="img/svg/sprite.svg#download"></use>
+								</svg><span class="footer__link-txt">Заявление о конфиденциальности</span>
+							</a>
+						</div>
+						<div class="col-lg text-lg-end">
+							<div class="footer__bot-txt">Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">

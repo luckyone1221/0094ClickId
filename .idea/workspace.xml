@@ -9,23 +9,18 @@
       <change beforePath="$PROJECT_DIR$/public/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/headerBlock/_headerBlock.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/headerBlock/_headerBlock.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/img/sService-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/footer/_footer.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/footer/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/footer/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/modal/_modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/modal/_modal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/sService/_sService.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/sService/_sService.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/pug/blocks/sService/_sService.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/blocks/sService/_sService.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sourse/pug/pages/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/pages/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourse/pug/pages/layout/js-css.pug" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/pug/pages/layout/js-css.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sourse/sass/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/sass/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_root.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sourse/sass/_sprite.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_sprite.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sourse/sass/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/_vars.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sourse/sass/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/sourse/sass/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/basket.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/check.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/fb.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/instagram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/telegram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/viber.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/vk.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sourse/svg/whatsapp.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../0084Avtorecord" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,7 +78,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635793128183</updated>
-      <workItem from="1635793130659" duration="9842000" />
+      <workItem from="1635793130659" duration="10457000" />
+      <workItem from="1635844692371" duration="15000" />
+      <workItem from="1635854915662" duration="25939000" />
     </task>
     <servers />
   </component>

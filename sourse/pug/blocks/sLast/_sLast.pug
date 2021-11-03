@@ -1,0 +1,55 @@
+mixin sLast(data)
+	// start sLast
+	+b.SECTION.sLast.section#sLast&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Последние возвраты :
+			+e.items
+				+sLastItem({
+					imgNum: 1,
+					date: '04.07.2021',
+					name: 'Александр М.',
+					lost: 'Багаж',
+					returnDays: '2 дня',
+				})
+				+sLastItem({
+					imgNum: 2,
+					date: '06.07.2021',
+					name: 'Иван Х.',
+					lost: 'Ключи',
+					returnDays: '8 часов',
+				})
+				+sLastItem({
+					imgNum: 3,
+					date: '06.07.2021',
+					name: 'Виктор Д.',
+					lost: 'Документы',
+					returnDays: '2 часа',
+				})
+				+sLastItem({
+					imgNum: 1,
+					date: '05.07.2021',
+					name: 'Елена Г.',
+					lost: 'Багаж',
+					returnDays: '1 день',
+				})
+			+e.sm-gray * - Пользователи дали согласие на публикацию своих данных
+	// end sLast
+
+mixin sLastItem(data)
+	+e.item
+		+e.item-row.row
+			+e.col--img.col-auto
+				+e.img
+					img(loading="lazy" src=`img/svg/sLast-${data.imgNum}.svg` alt="")
+			+e.col--date.col.col-sm-auto
+				+e.gray=data.date
+				+e.big--name=data.name
+			+e.col--dots.col-sm
+				+e.dot-line.d-none.d-sm-block
+			+e.col--lost.col-auto
+				+e.gray Потеряно:
+				+e.big--lost=data.lost
+			+e.col--time.col.col-sm-auto
+				+e.gray Срок возврата:
+				+e.big--return=data.returnDays

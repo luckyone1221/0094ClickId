@@ -1,0 +1,80 @@
+// start .sAbout
+.sAbout {
+	--sPT: 40px;
+	--sPB: 67px;
+	--sTPB: 35px;
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(60)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(60)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--sPT: #{rem(90)};
+		--sPB: #{rem(426)};
+		--sTPB: #{rem(130)};
+	}
+
+	.section-title{
+		h2{}
+	}
+	&__row{
+		@extend .row-default;
+	}
+	&__img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 160px;
+		margin: 0 auto;
+		@include media-breakpoint-up(sm){
+			width: 100%;
+		}
+		@include media-breakpoint-up(md){
+			width: 208px;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+		p{
+			margin-bottom: 12px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(25);
+			}
+
+			&:first-child{
+				@include media-breakpoint-down(sm){
+					font-size: 17px;
+					line-height: calc(24/17);
+				}
+			}
+
+			b{
+				@include media-breakpoint-down(sm){
+					font-weight: 500;
+				}
+			}
+		}
+
+		a{
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	//-
+	&__{}
+	&__{}
+} // end.sAbout

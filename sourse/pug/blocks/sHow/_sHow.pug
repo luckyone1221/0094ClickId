@@ -1,0 +1,58 @@
+mixin sHow(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как это работает
+			+e.box
+				+e.logoes.d-none.d-xl-block
+					+sHowLogo()
+						img(loading="lazy" src=`img/@2x/sHow-logo-1.png` alt="")
+					+sHowLogo(2)
+					+sHowLogo(3)
+				+e.row.row.justify-content-center
+					+sHowItem({
+						imgNum: '1',
+						title: 'Покупка',
+						descr: 'Вы покупаете пакет услуг',
+					})
+					+sHowItem({
+						imgNum: '2',
+						title: 'Получение',
+						descr: 'Доставка Почтой России',
+					})
+					+sHowItem({
+						imgNum: '3',
+						title: 'Применение',
+						descr: 'Вы наклеиваете или прикрепляете  приобретенные метки',
+					})
+					+sHowItem({
+						imgNum: '4',
+						title: 'Информирование',
+						descr: 'Как только утерянная вещь будет найдена, мы сообщим об этом и поможем вернуть',
+					})
+					+sHowItem({
+						imgNum: '5',
+						title: 'Возврат',
+						descr: 'Clicktoid доставляет найденную вещь в любое удобное для вас время и место ',
+					})
+
+	// end sHow
+
+mixin sHowLogo(imgNum)
+	+e.logo
+		if block
+			block
+		else
+			img(loading="lazy" src=`img/svg/sHow-logo-${imgNum}.svg` alt="")
+
+mixin sHowItem(data)
+	+e.col.col-xl-auto.col-md-4
+		+e.item
+			+e.item-row.row.align-items-center.flex-xl-nowrap
+				+e.sub-col--img.col-auto.col-md-12.col-xl-auto
+					+e.i-img
+						img(loading="lazy" src=`img/svg/sHow-${data.imgNum}.svg` alt="")
+				+e.sub-col--descr.col.col-md-12.col-xl-auto
+					+e.title=data.title
+					+e.descr=data.descr

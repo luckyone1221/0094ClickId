@@ -1,9 +1,40 @@
 mixin footer()
-	+b.FOOTER.footer
+	+b.FOOTER.footer.text-center.text-md-start
 		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+			+e.top-row.row
+				.col-md
+					+e.sub-row.row.justify-content-center.justify-content-md-start
+						+footerLogo('img/@2x/footer-logo-1.png')
+						+footerLogo('img/svg/footer-logo-2.svg')
+						.col-lg.d-none.d-sm-block
+							+e.top-txt Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
+					+e.UL.menu
+						li: a(href="#") оплата
+						li: a(href="#") Получение
+						li: a(href="#") Продление
+						li: a(href="#") Вопросы и ответы
+					+e.top-txt.d-sm-none Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
+				.col-md-auto.text-md-end
+					+footerLink('8 800 444 43 08', 'tel:+88004444308', 'Консультация и поддержка клиентов')
+					+footerLink('8 499 685 43 08', 'tel:+84996854308', 'Help and customer support')
+			+e.bot-row.row
+				+footerIconed('Политика конфиденциальности')
+				+footerIconed('Заявление о конфиденциальности')
+				.col-lg.text-lg-end
+					+e.bot-txt Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
+
+mixin footerLogo(imgPass)
+	.col-auto
+		+e.f-logo(href="#")
+			img(loading="lazy" src=`${imgPass}` alt="")
+
+mixin footerIconed(txt)
+	.col-lg-auto.text-center.text-md-start
+		+e.iconed-link(href="#")
+			+icon('download')
+			+e.SPAN.link-txt=txt
+
+mixin footerLink(tell, href, txt)
+	+e.link-wrap
+		+e.link(href=href)=tell
+		+e.sm-txt=txt

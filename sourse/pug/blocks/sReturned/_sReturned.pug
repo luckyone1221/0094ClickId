@@ -1,0 +1,42 @@
+mixin sReturned(data)
+	// start sReturned
+	+b.sReturned.section#sReturned&attributes(attributes)
+		.container
+			+e.title Всего возвращено:
+			+e.box
+				+e.row.row
+					+sReturnedItem({
+						imgNum: 1,
+						txt: '54 багажа',
+					})
+					+sReturnedItem({
+						imgNum: 3,
+						txt: '192 документа',
+					})
+					+sReturnedItem({
+						imgNum: 2,
+						txt: '598 ключей',
+					})
+			+e.galery-row.row
+				+e.col--left.col-lg-6
+					-for (var i = 1; i <= 6; i++)
+						+sReturnedImg(i)
+				+e.col--right.col-lg-6
+					-for(var i = 7; i <= 10; i++)
+						+sReturnedImg(i)
+
+	// end sReturned
+
+mixin sReturnedImg(imgNum)
+	+e.g-img
+		img(loading="lazy" src=`img/@2x/sReturned-${imgNum}.png` alt="")
+
+mixin sReturnedItem(data)
+	+e.col.col-md-4
+		+e.sub-row.row.align-items-center
+			+e.sub-col--img.col-auto.col-md-auto
+				+e.img
+					img(loading="lazy" src=`img/svg/sLast-${data.imgNum}.svg` alt="")
+			+e.sub-col--bar.col
+			+e.sub-col--txt.col-auto.col-md-12
+				+e.txt=data.txt

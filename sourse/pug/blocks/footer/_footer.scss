@@ -1,43 +1,199 @@
 .footer {
-		
+	background: $dark2;
+	color: $white;
+
 	margin-top: auto;
+	padding: 16px 0 16px;
+	@include media-breakpoint-up(sm){
+		padding: rem(72) 0 rem(40);
+	}
 
-// 
-@include media-breakpoint-up(xl) {}
+	&__top-row{
+		@extend .row-default;
+		@include media-breakpoint-down(sm){
+			--bs-gutter-y: 31px;
+		}
 
-@include media-breakpoint-up(lg) {}
+		margin-bottom: 23px;
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(33);
+		}
+	}
+	&__sub-row{
+		@extend .row-default;
 
-@include media-breakpoint-up(md) {}
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(69);
+		}
+	}
+	&__f-logo{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-@include media-breakpoint-up(sm) {}
+		height: rem(34);
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__top-txt{
+		@include media-breakpoint-up(md){
+			max-width: rem(370)
+		}
+		font-family: $mono;
+		font-size: 14px;
+		line-height: calc(16/14);
+		letter-spacing: 0.2px;
+		color: $dark;
+	}
+	&__menu{
+		list-style: none;
+		padding: 0;
 
-@include media-breakpoint-up(xs) {}
+		margin: 0 auto -1px;
+		width: 188px;
+		@include media-breakpoint-up(sm){
+			width: 100%;
+			margin: 0 0 -24px;
+		}
 
+		justify-content: center;
+		@include media-breakpoint-up(md){
+			justify-content: flex-start;
+		}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		li{
+			margin-bottom: 24px;
 
+			margin-right: 24px;
+			@include media-breakpoint-up(md){
+				margin-right: var(--bs-gutter-x);
+			}
+			@include media-breakpoint-up(xxl){
+				margin-right: rem(50);
+			}
 
-// 
-@include media-breakpoint-only(xs) {}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		a{
+			font-family: $mono;
+			font-weight: bold;
 
-@include media-breakpoint-only(sm) {}
+			font-size: 8px;
+			line-height: calc(9/8);
+			letter-spacing: 0.2px;
+			@include media-breakpoint-up(sm){
+				font-size: 14px;
+				line-height: calc(16/14);
+				letter-spacing: 0.6px;
+			}
+			text-transform: uppercase;
 
-@include media-breakpoint-only(md) {}
+			color: $gray-100;
+			&:hover{
+				color: $white;
+			}
+		}
+	}
+	//
+	&__link-wrap{
+		margin-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(24);
+		}
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(32);
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__link{
+		display: inline-block;
+		font-family: $mono;
+		font-weight: bold;
 
-@include media-breakpoint-only(lg) {}
+		font-size: 18px;
+		line-height: calc(24/18);
+		margin-bottom: 0;
+		@include media-breakpoint-up(sm){
+			margin-bottom: 4px;
+			font-size: rem(28);
+			line-height: calc(32/28);
+		}
 
-@include media-breakpoint-only(xl) {}
+		text-align: center;
+		letter-spacing: rem(0.3);
+		color: $green;
+	}
+	&__sm-txt{
+		font-family: $mono;
+		font-size: 14px;
+		line-height: calc(16/14);
+		letter-spacing: 0.2px;
+		color: $gray-100;
+	}
+	//
+	&__bot-row{
+		@extend .row-default;
 
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(48)};
+		}
+	}
+	&__iconed-link{
+		display: inline-block;
+		align-items: center;
 
-// 
-@include media-breakpoint-down(xl) {}
+		.icon{
+			flex-shrink: 0;
+			font-size: 16px;
+			margin-right: 4px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(24);
+				margin-right: rem(8);
+			}
+			color: currentColor;
+		}
 
-@include media-breakpoint-down(lg) {}
+		color: $gray-600;
+		&:hover{
+			color: $white;
+			.icon{
+				color: $primary;
+			}
+		}
+	}
+	&__link-txt{
 
-@include media-breakpoint-down(md) {}
+	}
+	&__bot-txt{
+		font-family: $mono;
+		font-size: 14px;
+		line-height: calc(16/14);
+		letter-spacing: 0.02em;
+		color: $gray-600;
 
-@include media-breakpoint-down(sm) {}
+		padding-top: 0;
+		@include media-breakpoint-up(sm){
+			padding-top: 7px;
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 370px;
+			margin-left: auto;
+		}
+	}
 
-@include media-breakpoint-down(xs) {}
+	//-
+	&__{}
+	&__{}
 }
