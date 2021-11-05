@@ -3,7 +3,7 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(placeholder,  t='text', label, name= t, addTitleClasses="", hasCross)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
@@ -23,9 +23,12 @@ mixin input(placeholder,  t='text', label, name= t)
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
 	+e.input-wrap.form-group
 		if label
+			+e.SPAN.input-title(class=addTitleClasses)= label
 			label
-				+e.SPAN.input-title= label
 				+t(t,placeholder, name)&attributes(attributes)
+				if hasCross
+					+e.btn-cross(type="button")
+						+icon('cross')
 				block
 		else
 			+t(t,placeholder, name)&attributes(attributes)

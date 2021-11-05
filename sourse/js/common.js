@@ -202,6 +202,35 @@ function eventHandler() {
 		},
 
 	});
+	//
+	function makeDDGroup(){
+		let parents = document.querySelectorAll('.dd-group-js');
+
+		for (let parent of parents){
+			if (parent){
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
+				for(let head of ChildHeads){
+					head.addEventListener('click', function (){
+						let clickedHead = head;
+
+						for(let head of ChildHeads){
+							if (head === clickedHead){
+								//parent element gain toggle class, style head change via parent
+								head.parentElement.classList.toggle('active');
+								slideToggle(head.parentElement.querySelector('.dd-content-js'));
+							}
+							else{
+								head.parentElement.classList.remove('active');
+								slideUp(head.parentElement.querySelector('.dd-content-js'));
+							}
+						}
+					})
+				}
+			}
+		}
+	}
+	makeDDGroup();
 
 
 	// modal window

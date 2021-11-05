@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sLast/_sLast.pug
+include ../blocks/sReturned/_sReturned.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCompany/_sCompany.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sRecive/_sRecive.pug
+include ../blocks/sPayment/_sPayment.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg='04-320.png'
+
+block title
+	- let  title= '04-payment'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Оплата')
+	+sPayment()
+	+footer()

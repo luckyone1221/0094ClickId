@@ -1,0 +1,148 @@
+// start .sFAQ
+.sFAQ {
+	padding-top: 0;
+
+	--sPB: 64px;
+	--sTPB: 24px;
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(48)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(155)};
+	}
+
+	.section-title{
+		h1, h2{
+			margin-bottom: 24px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(35);
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(64);
+			}
+		}
+		p{
+			max-width: 950px;
+			a{
+				margin-left: rem(4);
+			}
+		}
+	}
+	&__dd-items{
+
+	}
+	&__dd-item{
+		margin-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(30);
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(64);
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&.active{
+			--chevron-rotate: 180deg;
+		}
+	}
+	&__dd-head{
+		cursor: pointer;
+	}
+	&__h-row{
+		--bs-gutter-x: 8px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
+	&__col{
+		&--title{
+			max-width: 80%;
+			font-family: $mono;
+			font-weight: bold;
+
+			font-size: 18px;
+			line-height: calc(24/18);
+			@include media-breakpoint-up(sm){
+				font-size: 28px;
+				line-height: calc(32/28);
+				letter-spacing: rem(0.5);
+			}
+
+			color: $body-color;
+		}
+		&--line{}
+		&--chevron{
+
+		}
+	}
+	&__line{
+		@extend .dot-line;
+		&:before{
+			left: -2px;
+			width: 6px;
+			height: 6px;
+			background-color: $green2;
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+		}
+		&:after{
+			right: -2px;
+			width: 6px;
+			height: 6px;
+			background-color: $green2;
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+		}
+	}
+	&__icon{
+		@include mt();
+		transform: rotateX(var(--chevron-rotate));
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: rem(24);
+		height: rem(24);
+
+		.icon{
+			font-size: rem(24);
+			color: $primary;
+		}
+	}
+
+	&__dd-content{
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		padding-top: 12px;
+		@include media-breakpoint-up(sm){
+			padding-top: rem(18);
+		}
+		@include media-breakpoint-up(xl){
+			padding-top: rem(24);
+		}
+
+		p{
+			margin-bottom: 16px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(20px);
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(26px);
+				line-height: 1.42;
+			}
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	//-
+	&__{}
+	&__{}
+} // end.sFAQ

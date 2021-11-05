@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sLast/_sLast.pug
+include ../blocks/sReturned/_sReturned.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCompany/_sCompany.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sRecive/_sRecive.pug
+include ../blocks/sPayment/_sPayment.pug
+include ../blocks/sConfirm/_sConfirm.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg='05-320.png'
+
+block title
+	- let  title= '00-modals'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	.section
+		.container
+			.row.gy-3
+				+modalBtn('#modal-email', 'Введите Ваш e-mail:')
+				+modalBtn('#modal-success', 'Пакет услуг успешно приобретен!')
+				+modalBtn('#modal-service', 'Продление обслуживания')
+				+modalBtn('#modal-send', 'Запрос отправлен')
+				+modalBtn('#modal-order', 'Заказ услуги')
+				+modalBtn('#modal-pay', 'Выберите способ оплаты')
+	+footer()
+
+mixin modalBtn(href, txt)
+	.col-auto
+		a.btn.btn-primary.link-modal-js(href=href)=txt

@@ -1,16 +1,103 @@
 mixin modal()
 	//  start modals
 	//-a(href="modal-call").link-modal-js modal-call
-	div(id="modal-call"  style="display: none" )
+	div(id="modal-email"  style="display: none")
 		+b.modal-win
 			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
-	// #modal-call
+				+e.title
+					h4 Введите Ваш e-mail:
+					p Адрес электронной почты нужен для отправки чека при покупке.
+				+e.inputs
+					+input('Введите данные', 'email', 'E-mail', 'email', 'required', true)(required)
+				+e.foot-row.row
+					.col-md-6
+						+e.btn--green(type="submit") Далее
+					.col-md-6
+						+e.btn--white.modal-close-js(type="button") отмена
+	div(id="modal-success" style="display: none")
+		+b.modal-win
+			+form-wrap
+				+e.title
+					h4 Пакет услуг успешно приобретен!
+					p Благодарим за приобретение комплекта, дополнительная информация направлена на электронную почту.
+				+e.foot-row.row
+					.col-md-12
+						+e.btn--green.modal-close-js(type="button") Ок
+	div(id="modal-service"  style="display: none")
+		+b.modal-win
+			+form-wrap
+				+e.title
+					h4 Продление обслуживания
+					p Если срок действия Вашего пакета услуг подходит к концу, то не спешите покупать новый! Вы можете продлить прежние метки.
+					p
+						| Если у Вас возникнут вопросы, Вы всегда можете позвонить по телефону нашей горячей линии
+						|
+						a(href="tel:88004444308") 8 800 444 43 08
+				+e.inputs
+					+input('Введите данные', 'text', 'Уникальный номер', 'uniq_num', 'required', true)(required)
+					+e.required-txt * - Обязательные поля
+				+e.foot-row.row
+					.col-md-6
+						+e.btn--green(type="submit") Отправить запрос
+					.col-md-6
+						+e.btn--white.modal-close-js(type="button") отмена
+	div(id="modal-send" style="display: none")
+		+b.modal-win
+			+form-wrap
+				+e.title
+					h4 Запрос отправлен
+					p
+						| Если у вас есть дополнительные вопросы позвоните по номеру:
+						|
+						a(href="tel:88004444308") 8 800 444 43 08
+				+e.foot-row.row
+					.col-md-12
+						+e.btn--green.modal-close-js(type="button") Ок
+	div(id="modal-order"  style="display: none")
+		+b.modal-win
+			+form-wrap
+				+e.title
+					h4 Заказ услуги
+					p Введите данные для оформления заказа
+				+e.order
+					+e.o-title
+					+e.o-row.row.align-items-end
+						+e.o-col--title.col-lg Найди меня
+						+e.o-col--content.col-lg-auto
+							+e.amount-row.row.align-items-end
+								+e.a-col--txt.col-auto Количество:
+								+e.a-col--amount.col х4
+								+e.a-col--slash.col /
+								+e.a-col--per.col 2 500 ₽ за единицу
+					+e.o-row.row.align-items-end
+						+e.o-col--title.col-lg Доставка
+						+e.o-col--content.col-lg-auto
+							+e.delivery 1 500 ₽
+					+e.price-row.row.align-items-end
+						+e.p-col--txt.col Итого:
+						+e.p-col--val.col-auto
+							+e.price--val 11 500
+							+e.price--currency ₽
+				+e.inputs
+					+input('Введите данные', 'text', 'Адрес доставки', 'address', 'required', true)(required)
+					+input('Введите данные', 'email', 'Ваш e-mail', 'name', 'required', true)(required)
+					+e.required-txt * - Обязательные поля
+				+e.foot-row.row
+					.col-md-6
+						+e.btn--green(type="submit") Далее
+					.col-md-6
+						+e.btn--white.modal-close-js(type="button") отмена
+	div(id="modal-pay"  style="display: none")
+		+b.modal-win--sm
+			+form-wrap
+				+e.title--mb-xl-48.text-center
+					h4 Выберите способ оплаты
+				+e.btns
+					+e.btn--green(href='#') Оплата картой
+					+e.btn--out-black(href="#")
+						img(loading="lazy" src="img/svg/apple-pay.svg")
+					+e.btn--out-black(href="#")
+						img(loading="lazy" src="img/svg/google-pay.svg")
+	//- modal-order
 	
 	// end modals

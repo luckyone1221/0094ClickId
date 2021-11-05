@@ -1,0 +1,90 @@
+// start .sCompany
+.sCompany {
+	padding-top: 0;
+
+	--sPB: 64px;
+	--sTPB: 24px;
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(48)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(212)};
+	}
+
+	.section-title{
+		h1, h2{
+			margin-bottom: 24px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(35);
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(64);
+			}
+		}
+		p{
+			font-weight: 500;
+			@include media-breakpoint-up(sm){
+				font-weight: bold;
+			}
+			font-size: 17px;
+			line-height: calc(24/17);
+		}
+	}
+
+	&__txt-content{
+		& > *:last-child{
+			margin-bottom: 0!important;
+		}
+
+		p{
+			margin-bottom: 16px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(20px);
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(26px);
+			}
+		}
+		img{
+			width: 100%;
+			height: auto;
+
+			margin-top: 42px;
+			margin-bottom: 60px;
+			@include media-breakpoint-up(sm){
+				margin-top: rem(75);
+				margin-bottom: rem(75);
+			}
+			@include media-breakpoint-up(xl){
+				margin-top: rem(120);
+				margin-bottom: rem(106);
+			}
+		}
+		blockquote{
+			font-weight: 500;
+			@include media-breakpoint-up(sm){
+				font-weight: bold;
+			}
+			font-size: 17px;
+			line-height: calc(24/17);
+
+			border-top: 1px solid rgba($dark, .3);
+			border-bottom: 1px solid rgba($dark, .3);
+
+			padding: 20px 0;
+			margin-bottom: 24px;
+			@include media-breakpoint-up(sm){
+				padding: rem(30) 0;
+				margin-bottom: rem(30);
+			}
+			@include media-breakpoint-up(xl){
+				padding: rem(44) 0;
+				margin-bottom: 10.5px;
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sCompany

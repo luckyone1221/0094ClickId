@@ -46,6 +46,31 @@
 		background: $gray-100;
 		border: 1px solid rgba(98, 115, 119, 0.2);
 		box-shadow: 0px 36px 92px rgba(0, 0, 0, 0.12);
+
+
+		//vars
+		--slide-px: 16px;
+		--slide-py: 16px;
+		@include media-breakpoint-up(md){
+			--slide-px: #{rem(32)};
+			--slide-py: #{rem(32)};
+		}
+		@include media-breakpoint-up(xl){
+			--slide-px: #{rem(32)};
+			--slide-py: #{rem(32)};
+		}
+		@include media-breakpoint-up(xxl){
+			--slide-px: #{rem(64)};
+			--slide-py: #{rem(64)};
+		}
+
+
+		--l-col-w: 100%;
+		--r-col-w: 100%;
+		@include media-breakpoint-up(md){
+			--l-col-w: 85.5%;
+			--r-col-w: calc(100% - var(--l-col-w));
+		}
 	}
 	&__row{
 		--bs-gutter-x: 0;
@@ -61,29 +86,7 @@
 		}
 	}
 
-	//vars
-	--slide-px: 16px;
-	--slide-py: 16px;
-	@include media-breakpoint-up(md){
-		--slide-px: #{rem(32)};
-		--slide-py: #{rem(32)};
-	}
-	@include media-breakpoint-up(xl){
-		--slide-px: #{rem(32)};
-		--slide-py: #{rem(32)};
-	}
-	@include media-breakpoint-up(xxl){
-		--slide-px: #{rem(64)};
-		--slide-py: #{rem(64)};
-	}
 
-
-	--l-col-w: 100%;
-	--r-col-w: 100%;
-	@include media-breakpoint-up(md){
-		--l-col-w: 85.5%;
-		--r-col-w: calc(100% - var(--l-col-w));
-	}
 	//
 
 	&__col{

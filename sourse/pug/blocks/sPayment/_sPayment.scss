@@ -1,0 +1,128 @@
+// start .sPayment
+.sPayment {
+	padding-top: 0;
+
+	--sPB: 64px;
+	--sTPB: 24px;
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(71)};
+		--sTPB: #{rem(35)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(92)};
+		--sTPB: #{rem(64)};
+	}
+
+	.section-title{
+		h1, h2{
+			margin-bottom: 24px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(35);
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(64);
+			}
+		}
+	}
+	&__txt-content{
+		margin-bottom: 31px;
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(45);
+		}
+		ol{
+			counter-reset: list 0;
+			list-style: none;
+			padding: 0;
+			margin: 0 0 24px;
+
+			li{
+				display: flex;
+
+				margin-bottom: 0;
+				@include media-breakpoint-up(sm){
+					margin-bottom: 1px;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+
+				&:before{
+					display: inline-block;
+					counter-increment: list;
+					content: counter(list)".";
+					margin: 0 5px;
+				}
+			}
+		}
+
+		//-
+		p{
+			&:last-child{
+				@include media-breakpoint-up(xl){
+					margin-top: rem(29);
+				}
+			}
+		}
+		h6{
+			font-family: $mono;
+			font-weight: bold;
+
+			font-size: 14px;
+			line-height: calc(16/14);
+			margin-bottom: 24px;
+			@include media-breakpoint-up(sm){
+				font-size: 20px;
+				line-height: calc(26/20);
+				margin-bottom: 24px;
+			}
+		}
+	}
+	&__important{
+		font-weight: bold;
+		@include media-breakpoint-down(sm){
+			font-family: $mono;
+			font-size: 14px;
+			line-height: calc(16/14);
+		}
+
+		margin-bottom: 18px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(26);
+		}
+
+		&--green{
+			color: $primary;
+
+			max-width: 88%;
+			@include media-breakpoint-up(sm){
+				max-width: 100%;
+			}
+
+			@include media-breakpoint-down(sm){
+				margin-bottom: 22px;
+			}
+		}
+	}
+	//
+	&__download{
+		white-space: nowrap;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			flex-shrink: 0;
+			font-size: 16px;
+			margin-right: 4px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(24);
+				margin-right: rem(8);
+			}
+		}
+		span{
+
+		}
+	}
+	&__{}
+	&__{}
+} // end.sPayment
