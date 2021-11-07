@@ -62,6 +62,7 @@
 			}
 		}
 		blockquote{
+			color: $primary;
 			font-weight: 500;
 			@include media-breakpoint-up(sm){
 				font-weight: bold;

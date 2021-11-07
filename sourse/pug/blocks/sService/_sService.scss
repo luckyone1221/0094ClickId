@@ -316,6 +316,7 @@
 	&__inp-btn{
 		@extend .btn;
 		@extend .btn-dark;
+		border-radius: 0;
 
 		border: none!important;
 		box-shadow: none!important;
@@ -324,7 +325,7 @@
 		background-color: transparent!important;
 		color: $dark!important;
 		&:hover{
-			background-color: $dark!important;
+			background-color: $primary!important;
 			color: $white!important;
 		}
 
@@ -332,8 +333,8 @@
 		z-index: 2;
 		top: calc(50% - 4px);
 		transform: translateY(-50%);
-		width: 16px;
-		height: 16px;
+		width: 24px;
+		height: 24px;
 
 		display: flex;
 		align-items: center;
@@ -357,9 +358,9 @@
 
 		font-weight: bold;
 
-		padding: 3px 20px!important;
+		padding: 3px 28px!important;
 		@include media-breakpoint-up(sm){
-			padding: 0px 20px!important;
+			padding: 0px 28px!important;
 		}
 		border: none!important;
 		box-shadow: none!important;

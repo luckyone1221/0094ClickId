@@ -126,16 +126,44 @@
 			padding-top: rem(24);
 		}
 
-		p{
-			margin-bottom: 16px;
-			@include media-breakpoint-up(sm){
-				margin-bottom: rem(20px);
-			}
-			@include media-breakpoint-up(xl){
-				margin-bottom: rem(26px);
-				line-height: 1.42;
-			}
+		--content-mb: 16px;
+		@include media-breakpoint-up(sm){
+			--content-mb: #{rem(20px)};
 		}
+		@include media-breakpoint-up(xl){
+			--content-mb: #{rem(26px)};
+			line-height: 1.42;
+		}
+
+		p{
+			margin-bottom: var(--content-mb);
+		}
+		ul, ol{
+			//padding: 0;
+			margin: 0 0 var(--content-mb);
+		}
+		ol{
+			padding: 0;
+			list-style: none;
+			counter-reset: list 0;
+
+			li{
+				margin-bottom: rem(2);
+				&:last-child{
+					margin-bottom: 0;
+				}
+
+				&:before{
+					display: inline-block;
+					margin-right: 5px;
+					counter-increment: list;
+					content: counter(list)".";
+				}
+			}
+
+
+		}
+
 
 		&:last-child{
 			margin-bottom: 0;
