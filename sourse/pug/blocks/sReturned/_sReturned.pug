@@ -29,7 +29,8 @@ mixin sReturned(data)
 
 mixin sReturnedImg(imgNum)
 	+e.g-img
-		img(loading="lazy" src=`img/@2x/sReturned-${imgNum}.png` alt="")
+		+pic(`1sReturned-${imgNum}.png`,'',0)
+		//- img(loading="lazy" src=`img/@2x/sReturned-${imgNum}.png` alt="")
 
 mixin sReturnedItem(data)
 	+e.col.col-md-4
