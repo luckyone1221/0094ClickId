@@ -7,7 +7,8 @@ mixin sAbout(data)
 			+e.row.row
 				.col-md-auto
 					+e.img(href="#")
-						img(loading="lazy" src="img/@2x/sAbout.png" alt="")
+						//- img(loading="lazy" src="img/@2x/sAbout.png" alt="")
+						+pic("sAbout.png",'',0)
 				.col-md
 					+e.txt
 						p

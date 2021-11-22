@@ -7,7 +7,8 @@ mixin sHow(data)
 			+e.box
 				+e.logoes.d-none.d-xl-block
 					+sHowLogo()
-						img(loading="lazy" src=`img/@2x/sHow-logo-1.png` alt="")
+						//- img(loading="lazy" src=`img/@2x/sHow-logo-1.png` alt="")
+						+pic("sHow-logo-1.png",'',0)
 					+sHowLogo(2)
 					+sHowLogo(3)
 				+e.row.row.justify-content-center

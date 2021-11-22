@@ -130,7 +130,7 @@
 			--bs-gutter-y: #{rem(32)};
 		}
 		@include media-breakpoint-up(xxl){
-			--bs-gutter-x: #{rem(48)};
+			--bs-gutter-x: #{rem(40)};
 			--bs-gutter-y: #{rem(32)};
 		}
 	}

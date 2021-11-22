@@ -96,19 +96,13 @@
 									<a class="footer__f-logo" href="#"><img loading="lazy" src="img/svg/footer-logo-2.svg" alt=""/>
 									</a>
 								</div>
-								<div class="col-lg d-none d-sm-block">
-									<div class="footer__top-txt">Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
-									</div>
-								</div>
+								<div class="col-lg d-none d-sm-block"></div>
 							</div>
 							<ul class="footer__menu">
 								<li><a href="#">оплата</a></li>
 								<li><a href="#">Получение</a></li>
-								<li><a href="#">Продление</a></li>
 								<li><a href="#">Вопросы и ответы</a></li>
 							</ul>
-							<div class="footer__top-txt d-sm-none">Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
-							</div>
 						</div>
 						<div class="col-md-auto text-md-end">
 							<div class="footer__link-wrap">
@@ -139,10 +133,6 @@
 									<use xlink:href="img/svg/sprite.svg#download"></use>
 								</svg><span class="footer__link-txt">Заявление о конфиденциальности</span>
 							</a>
-						</div>
-						<div class="col-lg text-lg-end">
-							<div class="footer__bot-txt">Mattis dictum sed tincidunt arcu risus. Diam lectus malesuada fusce mi. Cras in sit leo elementum tincidunt placerat.
-							</div>
 						</div>
 					</div>
 				</div>
@@ -189,7 +179,7 @@
 					<form>
 						<div class="form-wrap__title">
 							<h4>Пакет услуг успешно приобретен!</h4>
-							<p>Благодарим за приобретение комплекта, дополнительная информация направлена на электронную почту.</p>
+							<p>Благодарим за приобретение пакета услуг, дополнительная информация направлена на электронную почту.</p>
 						</div>
 						<div class="form-wrap__foot-row row">
 							<div class="col-md-12">
@@ -207,9 +197,9 @@
 					<form>
 						<div class="form-wrap__title">
 							<h4>Продление обслуживания</h4>
-							<p>Если срок действия Вашего пакета услуг подходит к концу, то не спешите покупать новый! Вы можете продлить прежние метки.</p>
+							<p>Если срок действия Вашего пакета услуг подходит к концу, то не спешите покупать новый! вы можете продлить прежние метки.</p>
 							<p>
-								Если у Вас возникнут вопросы, Вы всегда можете позвонить по телефону нашей горячей линии
+								Если у Вас возникнут вопросы, вы всегда можете позвонить по телефону нашей горячей линии
 								<a href="tel:88004444308">8 800 444 43 08</a>
 							</p>
 						</div>
@@ -248,7 +238,7 @@
 						<div class="form-wrap__title">
 							<h4>Запрос отправлен</h4>
 							<p>
-								Если у вас есть дополнительные вопросы позвоните по номеру:
+								Если у вас есть дополнительные вопросы, позвоните по номеру:
 								<a href="tel:88004444308">8 800 444 43 08</a>
 							</p>
 						</div>
@@ -293,7 +283,7 @@
 								<div class="form-wrap__o-col form-wrap__o-col--title col-lg">Доставка
 								</div>
 								<div class="form-wrap__o-col form-wrap__o-col--content col-lg-auto">
-									<div class="form-wrap__delivery">1 500 ₽
+									<div class="form-wrap__delivery">бесплатно
 									</div>
 								</div>
 							</div>
@@ -309,8 +299,48 @@
 							</div>
 						</div>
 						<div class="form-wrap__inputs">
-							<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title required">Адрес доставки</span>
-								<label><input class="form-wrap__input form-control" name="address" type="text" placeholder="Введите данные" required="required"/>
+							<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title required">ФИО</span>
+								<label><input class="form-wrap__input form-control" name="name" type="text" placeholder="Введите данные" required="required"/>
+									<button class="form-wrap__btn-cross" type="button">
+										<svg class="icon icon-cross ">
+											<use xlink:href="img/svg/sprite.svg#cross"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title required">Номер телефона</span>
+								<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите данные" required="required"/>
+									<button class="form-wrap__btn-cross" type="button">
+										<svg class="icon icon-cross ">
+											<use xlink:href="img/svg/sprite.svg#cross"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title required">Индекс</span>
+								<label><input class="form-wrap__input form-control" name="index" type="text" placeholder="Введите данные" required="required"/>
+									<button class="form-wrap__btn-cross" type="button">
+										<svg class="icon icon-cross ">
+											<use xlink:href="img/svg/sprite.svg#cross"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title required">ИндГород/населенный пункт</span>
+								<label><input class="form-wrap__input form-control" name="city" type="text" placeholder="Введите данные" required="required"/>
+									<button class="form-wrap__btn-cross" type="button">
+										<svg class="icon icon-cross ">
+											<use xlink:href="img/svg/sprite.svg#cross"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title required">Улица, номер дома, квартиры</span>
+								<label><input class="form-wrap__input form-control" name="ul" type="text" placeholder="Введите данные" required="required"/>
 									<button class="form-wrap__btn-cross" type="button">
 										<svg class="icon icon-cross ">
 											<use xlink:href="img/svg/sprite.svg#cross"></use>
@@ -331,6 +361,10 @@
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__required-txt">* - Обязательные поля
 							</div>
+						</div>
+						<div class="mb-3">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text">Я принимаю условия <a href="#">Соглашения</a>  и даю согласие на обработку своих <a href="#">персональных данных</a></span>
+							</label>
 						</div>
 						<div class="form-wrap__foot-row row">
 							<div class="col-md-6">

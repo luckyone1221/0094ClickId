@@ -19,7 +19,7 @@ mixin modal()
 			+form-wrap
 				+e.title
 					h4 Пакет услуг успешно приобретен!
-					p Благодарим за приобретение комплекта, дополнительная информация направлена на электронную почту.
+					p Благодарим за приобретение пакета услуг, дополнительная информация направлена на электронную почту.
 				+e.foot-row.row
 					.col-md-12
 						+e.btn--green.modal-close-js(type="button") Ок
@@ -28,9 +28,9 @@ mixin modal()
 			+form-wrap
 				+e.title
 					h4 Продление обслуживания
-					p Если срок действия Вашего пакета услуг подходит к концу, то не спешите покупать новый! Вы можете продлить прежние метки.
+					p Если срок действия Вашего пакета услуг подходит к концу, то не спешите покупать новый! вы можете продлить прежние метки.
 					p
-						| Если у Вас возникнут вопросы, Вы всегда можете позвонить по телефону нашей горячей линии
+						| Если у Вас возникнут вопросы, вы всегда можете позвонить по телефону нашей горячей линии
 						|
 						a(href="tel:88004444308") 8 800 444 43 08
 				+e.inputs
@@ -47,7 +47,7 @@ mixin modal()
 				+e.title
 					h4 Запрос отправлен
 					p
-						| Если у вас есть дополнительные вопросы позвоните по номеру:
+						| Если у вас есть дополнительные вопросы, позвоните по номеру:
 						|
 						a(href="tel:88004444308") 8 800 444 43 08
 				+e.foot-row.row
@@ -72,16 +72,24 @@ mixin modal()
 					+e.o-row.row.align-items-end
 						+e.o-col--title.col-lg Доставка
 						+e.o-col--content.col-lg-auto
-							+e.delivery 1 500 ₽
+							//- +e.delivery 1 500 ₽
+							+e.delivery бесплатно
 					+e.price-row.row.align-items-end
 						+e.p-col--txt.col Итого:
 						+e.p-col--val.col-auto
 							+e.price--val 11 500
 							+e.price--currency ₽
 				+e.inputs
-					+input('Введите данные', 'text', 'Адрес доставки', 'address', 'required', true)(required)
+					+input('Введите данные', 'text', 'ФИО', 'name', 'required', true)(required)
+					+input('Введите данные', 'tel', 'Номер телефона', 'tel', 'required', true)(required)
+					+input('Введите данные', 'text', 'Индекс', 'index', 'required', true)(required)
+					+input('Введите данные', 'text', 'ИндГород/населенный пункт', 'city', 'required', true)(required)
+					+input('Введите данные', 'text', 'Улица, номер дома, квартиры', 'ul', 'required', true)(required)
 					+input('Введите данные', 'email', 'Ваш e-mail', 'name', 'required', true)(required)
 					+e.required-txt * - Обязательные поля
+				.mb-3
+					+in-c()
+						+e.SPAN.text Я принимаю условия #[a(href="#") Соглашения]  и даю согласие на обработку своих #[a(href="#") персональных данных]
 				+e.foot-row.row
 					.col-md-6
 						+e.btn--green(type="submit") Далее
